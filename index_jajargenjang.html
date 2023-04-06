@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jajar Genjang</title>
+    <link rel="stylesheet" type="text/css" href="index_jajargenjang.css">
+</head>
+<body>
+    <h1>Menghitung Luas & Keliling Jajar Genjang</h1><br>
+    <h2>
+    <label for="">Alas Jajar Genjang</label><br>
+    <input type="number" id="alas"><br><br>
+    <label for="">Tinggi Jajar Genjang</label><br>
+    <input type="number" id="tinggi"><br><br>
+    <label for="">Sisi 1</label><br>
+    <input type="number" id="sisi1"><br><br>
+    <label for="">Sisi 2</label><br>
+    <input type="number" id="sisi2"><br><br>
+    <button id="hitung">Hitung</button><br>
+    <div id="output"></div>
+    </h2>
+    <script>
+        const alas = document.getElementById('alas')
+        const tinggi = document.getElementById('tinggi')
+        const sisi1 = document.getElementById('sisi1')
+        const sisi2 = document.getElementById('sisi2')
+        const sisi3 = document.getElementById('sisi3')
+        const hitung = document.getElementById('hitung')
+        const output = document.getElementById('output')
+        hitung.addEventListener('click', function(){
+            let a = alas.value
+            let t = tinggi.value
+            let s1 = sisi1.value
+            let s2 = sisi2.value
+            let l = a*t
+            z = parseInt(s1)
+            x = parseInt(s2)
+            let k = 2*(z+x)
+            output.innerHTML = `diketahui alas = ${a} cm dan tinggi = ${t} cm, <br />
+            maka luas jajar genjang tersebut adalah ${a} x ${t} = ${l} cm2 <br />
+            lalu sisi 1 = ${s1} cm dan sisi 2 = ${s2} cm <br />
+            maka kelilingnya adalah 2 x (${s1} + ${s2}) = ${k} cm`
+        })
+    </script>
+</body>
+</html>

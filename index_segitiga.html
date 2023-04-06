@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segitiga</title>
+    <link rel="stylesheet" type="text/css" href="index_segitiga.css">
+</head>
+<body>
+    <h1>Menghitung Luas & Keliling Segitiga</h1><br>
+    <h2>
+    <label for="">Alas Segitiga</label><br>
+    <input type="number" id="alas"><br><br>
+    <label for="">Tinggi Segitiga</label><br>
+    <input type="number" id="tinggi"><br><br>
+    <label for="">Sisi 1</label><br>
+    <input type="number" id="sisi1"><br><br>
+    <label for="">Sisi 2</label><br>
+    <input type="number" id="sisi2"><br><br>
+    <label for="">Sisi 3</label><br>
+    <input type="number" id="sisi3"><br><br>
+    <button id="hitung">Hitung</button><br>
+    <div id="output"></div>
+    </h2>
+    <script>
+        const alas = document.getElementById('alas')
+        const tinggi = document.getElementById('tinggi')
+        const sisi1 = document.getElementById('sisi1')
+        const sisi2 = document.getElementById('sisi2')
+        const sisi3 = document.getElementById('sisi3')
+        const hitung = document.getElementById('hitung')
+        const output = document.getElementById('output')
+        hitung.addEventListener('click', function(){
+            let a = alas.value
+            let t = tinggi.value
+            let s1 = sisi1.value
+            let s2 = sisi2.value
+            let s3 = sisi3.value
+            let l = 0.5*a*t
+            z = parseInt(s1)
+            x = parseInt(s2)
+            c = parseInt(s3)
+            let k = z+x+c
+            output.innerHTML = `diketahui alas = ${a} cm dan tinggi = ${t} cm, 
+            <br /> maka luas segitiga tersebut adalah 1/2 x ${a} x ${t} = ${l} cm2 <br />
+            lalu diketahui sisi 1 = ${s1} cm, sisi 2 = ${s2} cm, sisi 3 = ${s3} cm,
+            <br /> maka kelilingnya adalah ${s1} + ${s2} + ${s3} = ${k} cm`
+        })
+    </script>
+</body>
+</html>
